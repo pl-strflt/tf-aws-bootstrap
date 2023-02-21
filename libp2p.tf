@@ -9,7 +9,7 @@ resource "aws_s3_bucket" "libp2p" {
 
 resource "aws_s3_bucket_acl" "libp2p" {
   bucket = aws_s3_bucket.libp2p.id
-  acl    = "private"
+  acl    = "public-read"
 }
 
 resource "aws_s3_bucket_lifecycle_configuration" "libp2p" {
